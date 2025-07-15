@@ -2,9 +2,6 @@
 
 This Android application implements a specialized AI chatbot focused on Honda two-wheeler products. It leverages Google's Gemini Pro API for conversational AI capabilities and is built using Kotlin and Jetpack Compose for the user interface. The chatbot is designed to understand and respond *exclusively in Japanese* to queries related to Honda's two-wheeler lineup.
 
-## Screenshots 
-
-![image](https://github.com/user-attachments/assets/2db9a738-3a45-4523-aa85-a7ce4612720c)
 
 ## Features
 
