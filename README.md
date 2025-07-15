@@ -1,11 +1,11 @@
-# Honda Two-Wheeler AI Chatbot
+#  AI Chatbot
 
-This Android application implements a specialized AI chatbot focused on Honda two-wheeler products. It leverages Google's Gemini Pro API for conversational AI capabilities and is built using Kotlin and Jetpack Compose for the user interface. The chatbot is designed to understand and respond *exclusively in Japanese* to queries related to Honda's two-wheeler lineup.
+This Android application implements a specialized AI chatbot focused on two-wheeler products. It leverages Google’s Gemini Pro API for conversational AI capabilities and is built using Kotlin and Jetpack Compose for the user interface. The chatbot is designed to understand and respond exclusively in Japanese to queries related to two-wheeler models and features.
 
 
 ## Features
 
-*   **Specialized AI:** The chatbot is configured with a system prompt to act as a Japanese AI customer specializing *exclusively* in Honda two-wheeler products.
+*   **Specialized AI:** The chatbot is configured with a system prompt to act as a Japanese AI customer specializing *exclusively* in scooter products.
 *   **Japanese Language Only:** All responses from the AI are in Japanese.
 *   **Chat Interface:** A simple and intuitive chat interface for users to ask questions.
 *   **Message History:** The conversation history is maintained and sent to the AI for contextual responses.
@@ -23,7 +23,7 @@ The application is structured around several key components:
 
 1.  **`ChatViewModel.kt`**: The ViewModel responsible for managing the chat state and business logic.
     *   `messageList`: A `mutableStateListOf<MessageModel>` that holds all messages in the chat. This being a `mutableStateListOf` ensures Compose UI updates when messages are added or removed.
-    *   `initialSystemPrompt`: A predefined string that instructs the Gemini model on its persona and limitations (Honda two-wheelers, Japanese language only).
+    *   `initialSystemPrompt`: A predefined string that instructs the Gemini model on its persona and limitations (two-wheelers, Japanese language only).
     *   `generativeModel`: An instance of `GenerativeModel` from the Google Generative AI SDK, configured with:
         *   `modelName`: "gemini-1.5-pro-latest"
         *   `apiKey`: Your Google AI Studio API key (should be stored in `Constants.apiKey`).
@@ -40,7 +40,7 @@ The application is structured around several key components:
 2.  **UI Composables (likely in `ChatScreen.kt` or similar, or directly in `MainActivity.kt` as shown):**
     *   **`ChatPage(viewModel: ChatViewModel)`**: The main composable function for the chat screen.
         *   Arranges `AppHeader`, `MessageList`, and `MessageInput` in a `Column`.
-    *   **`AppHeader()`**: A simple composable displaying the application title "Honda二輪車カスタマーサポート" (Honda Two-Wheeler Customer Support) in a styled `Box`.
+    *   **`AppHeader()`**: A simple composable displaying the application title "scooterカスタマーサポート" ( scooter Customer Support) in a styled `Box`.
     *   **`MessageList(messageList: List<MessageModel>)`**:
         *   Displays a welcome message and icon if `messageList` is empty.
         *   Uses a `LazyColumn` to efficiently display the list of messages in reverse order (latest at the bottom).
